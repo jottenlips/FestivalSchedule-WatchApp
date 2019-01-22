@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882221F7BECA009FBEEF /* AppDelegate.swift */; };
+		5253882521F7BECA009FBEEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882421F7BECA009FBEEF /* ViewController.swift */; };
+		5253882821F7BECA009FBEEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253882621F7BECA009FBEEF /* Main.storyboard */; };
+		5253882A21F7BECC009FBEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253882921F7BECC009FBEEF /* Assets.xcassets */; };
+		5253882D21F7BECC009FBEEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253882B21F7BECC009FBEEF /* LaunchScreen.storyboard */; };
+		5253883821F7BECC009FBEEF /* festyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253883721F7BECC009FBEEF /* festyTests.swift */; };
+		5253884321F7BECC009FBEEF /* festyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253884221F7BECC009FBEEF /* festyUITests.swift */; };
+		5253884821F7BECC009FBEEF /* festy WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5253884721F7BECC009FBEEF /* festy WatchKit App.app */; };
+		5253884E21F7BECC009FBEEF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253884C21F7BECC009FBEEF /* Interface.storyboard */; };
+		5253885021F7BECD009FBEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253884F21F7BECD009FBEEF /* Assets.xcassets */; };
+		5253885721F7BECD009FBEEF /* festy WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5253885621F7BECD009FBEEF /* festy WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5253885C21F7BECD009FBEEF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885B21F7BECD009FBEEF /* InterfaceController.swift */; };
+		5253885E21F7BECD009FBEEF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885D21F7BECD009FBEEF /* ExtensionDelegate.swift */; };
+		5253886021F7BECD009FBEEF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885F21F7BECD009FBEEF /* NotificationController.swift */; };
+		5253886221F7BECD009FBEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253886121F7BECD009FBEEF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5253883421F7BECC009FBEEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5253881721F7BECA009FBEEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5253881E21F7BECA009FBEEF;
+			remoteInfo = festy;
+		};
+		5253883F21F7BECC009FBEEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5253881721F7BECA009FBEEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5253881E21F7BECA009FBEEF;
+			remoteInfo = festy;
+		};
+		5253884921F7BECC009FBEEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5253881721F7BECA009FBEEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5253884621F7BECC009FBEEF;
+			remoteInfo = "festy WatchKit App";
+		};
+		5253885821F7BECD009FBEEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5253881721F7BECA009FBEEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5253885521F7BECD009FBEEF;
+			remoteInfo = "festy WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5253886A21F7BECD009FBEEF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5253885721F7BECD009FBEEF /* festy WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253886E21F7BECD009FBEEF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5253884821F7BECC009FBEEF /* festy WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5253881F21F7BECA009FBEEF /* festy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = festy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253882221F7BECA009FBEEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5253882421F7BECA009FBEEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5253882721F7BECA009FBEEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5253882921F7BECC009FBEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5253882C21F7BECC009FBEEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5253882E21F7BECC009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5253883321F7BECC009FBEEF /* festyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = festyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253883721F7BECC009FBEEF /* festyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festyTests.swift; sourceTree = "<group>"; };
+		5253883921F7BECC009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5253883E21F7BECC009FBEEF /* festyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = festyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253884221F7BECC009FBEEF /* festyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festyUITests.swift; sourceTree = "<group>"; };
+		5253884421F7BECC009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5253884721F7BECC009FBEEF /* festy WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "festy WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253884D21F7BECC009FBEEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5253884F21F7BECD009FBEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5253885121F7BECD009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5253885621F7BECD009FBEEF /* festy WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "festy WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253885B21F7BECD009FBEEF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		5253885D21F7BECD009FBEEF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5253885F21F7BECD009FBEEF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5253886121F7BECD009FBEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5253886321F7BECD009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5253886421F7BECD009FBEEF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5253881C21F7BECA009FBEEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253883021F7BECC009FBEEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253883B21F7BECC009FBEEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253885321F7BECD009FBEEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5253881621F7BECA009FBEEF = {
+			isa = PBXGroup;
+			children = (
+				5253882121F7BECA009FBEEF /* festy */,
+				5253883621F7BECC009FBEEF /* festyTests */,
+				5253884121F7BECC009FBEEF /* festyUITests */,
+				5253884B21F7BECC009FBEEF /* festy WatchKit App */,
+				5253885A21F7BECD009FBEEF /* festy WatchKit Extension */,
+				5253882021F7BECA009FBEEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5253882021F7BECA009FBEEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5253881F21F7BECA009FBEEF /* festy.app */,
+				5253883321F7BECC009FBEEF /* festyTests.xctest */,
+				5253883E21F7BECC009FBEEF /* festyUITests.xctest */,
+				5253884721F7BECC009FBEEF /* festy WatchKit App.app */,
+				5253885621F7BECD009FBEEF /* festy WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5253882121F7BECA009FBEEF /* festy */ = {
+			isa = PBXGroup;
+			children = (
+				5253882221F7BECA009FBEEF /* AppDelegate.swift */,
+				5253882421F7BECA009FBEEF /* ViewController.swift */,
+				5253882621F7BECA009FBEEF /* Main.storyboard */,
+				5253882921F7BECC009FBEEF /* Assets.xcassets */,
+				5253882B21F7BECC009FBEEF /* LaunchScreen.storyboard */,
+				5253882E21F7BECC009FBEEF /* Info.plist */,
+			);
+			path = festy;
+			sourceTree = "<group>";
+		};
+		5253883621F7BECC009FBEEF /* festyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5253883721F7BECC009FBEEF /* festyTests.swift */,
+				5253883921F7BECC009FBEEF /* Info.plist */,
+			);
+			path = festyTests;
+			sourceTree = "<group>";
+		};
+		5253884121F7BECC009FBEEF /* festyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5253884221F7BECC009FBEEF /* festyUITests.swift */,
+				5253884421F7BECC009FBEEF /* Info.plist */,
+			);
+			path = festyUITests;
+			sourceTree = "<group>";
+		};
+		5253884B21F7BECC009FBEEF /* festy WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				5253884C21F7BECC009FBEEF /* Interface.storyboard */,
+				5253884F21F7BECD009FBEEF /* Assets.xcassets */,
+				5253885121F7BECD009FBEEF /* Info.plist */,
+			);
+			path = "festy WatchKit App";
+			sourceTree = "<group>";
+		};
+		5253885A21F7BECD009FBEEF /* festy WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5253885B21F7BECD009FBEEF /* InterfaceController.swift */,
+				5253885D21F7BECD009FBEEF /* ExtensionDelegate.swift */,
+				5253885F21F7BECD009FBEEF /* NotificationController.swift */,
+				5253886121F7BECD009FBEEF /* Assets.xcassets */,
+				5253886321F7BECD009FBEEF /* Info.plist */,
+				5253886421F7BECD009FBEEF /* PushNotificationPayload.apns */,
+			);
+			path = "festy WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5253881E21F7BECA009FBEEF /* festy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253886F21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy" */;
+			buildPhases = (
+				5253881B21F7BECA009FBEEF /* Sources */,
+				5253881C21F7BECA009FBEEF /* Frameworks */,
+				5253881D21F7BECA009FBEEF /* Resources */,
+				5253886E21F7BECD009FBEEF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5253884A21F7BECC009FBEEF /* PBXTargetDependency */,
+			);
+			name = festy;
+			productName = festy;
+			productReference = 5253881F21F7BECA009FBEEF /* festy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5253883221F7BECC009FBEEF /* festyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253887221F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyTests" */;
+			buildPhases = (
+				5253882F21F7BECC009FBEEF /* Sources */,
+				5253883021F7BECC009FBEEF /* Frameworks */,
+				5253883121F7BECC009FBEEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5253883521F7BECC009FBEEF /* PBXTargetDependency */,
+			);
+			name = festyTests;
+			productName = festyTests;
+			productReference = 5253883321F7BECC009FBEEF /* festyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5253883D21F7BECC009FBEEF /* festyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253887521F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyUITests" */;
+			buildPhases = (
+				5253883A21F7BECC009FBEEF /* Sources */,
+				5253883B21F7BECC009FBEEF /* Frameworks */,
+				5253883C21F7BECC009FBEEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5253884021F7BECC009FBEEF /* PBXTargetDependency */,
+			);
+			name = festyUITests;
+			productName = festyUITests;
+			productReference = 5253883E21F7BECC009FBEEF /* festyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5253884621F7BECC009FBEEF /* festy WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253886B21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit App" */;
+			buildPhases = (
+				5253884521F7BECC009FBEEF /* Resources */,
+				5253886A21F7BECD009FBEEF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5253885921F7BECD009FBEEF /* PBXTargetDependency */,
+			);
+			name = "festy WatchKit App";
+			productName = "festy WatchKit App";
+			productReference = 5253884721F7BECC009FBEEF /* festy WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5253885521F7BECD009FBEEF /* festy WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253886721F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit Extension" */;
+			buildPhases = (
+				5253885221F7BECD009FBEEF /* Sources */,
+				5253885321F7BECD009FBEEF /* Frameworks */,
+				5253885421F7BECD009FBEEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "festy WatchKit Extension";
+			productName = "festy WatchKit Extension";
+			productReference = 5253885621F7BECD009FBEEF /* festy WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5253881721F7BECA009FBEEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = JohnOttenlips;
+				TargetAttributes = {
+					5253881E21F7BECA009FBEEF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5253883221F7BECC009FBEEF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5253881E21F7BECA009FBEEF;
+					};
+					5253883D21F7BECC009FBEEF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5253881E21F7BECA009FBEEF;
+					};
+					5253884621F7BECC009FBEEF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5253885521F7BECD009FBEEF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 5253881A21F7BECA009FBEEF /* Build configuration list for PBXProject "festy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5253881621F7BECA009FBEEF;
+			productRefGroup = 5253882021F7BECA009FBEEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5253881E21F7BECA009FBEEF /* festy */,
+				5253883221F7BECC009FBEEF /* festyTests */,
+				5253883D21F7BECC009FBEEF /* festyUITests */,
+				5253884621F7BECC009FBEEF /* festy WatchKit App */,
+				5253885521F7BECD009FBEEF /* festy WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5253881D21F7BECA009FBEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253882D21F7BECC009FBEEF /* LaunchScreen.storyboard in Resources */,
+				5253882A21F7BECC009FBEEF /* Assets.xcassets in Resources */,
+				5253882821F7BECA009FBEEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253883121F7BECC009FBEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253883C21F7BECC009FBEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253884521F7BECC009FBEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253885021F7BECD009FBEEF /* Assets.xcassets in Resources */,
+				5253884E21F7BECC009FBEEF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253885421F7BECD009FBEEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253886221F7BECD009FBEEF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5253881B21F7BECA009FBEEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253882521F7BECA009FBEEF /* ViewController.swift in Sources */,
+				5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253882F21F7BECC009FBEEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253883821F7BECC009FBEEF /* festyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253883A21F7BECC009FBEEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253884321F7BECC009FBEEF /* festyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253885221F7BECD009FBEEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5253886021F7BECD009FBEEF /* NotificationController.swift in Sources */,
+				5253885E21F7BECD009FBEEF /* ExtensionDelegate.swift in Sources */,
+				5253885C21F7BECD009FBEEF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5253883521F7BECC009FBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5253881E21F7BECA009FBEEF /* festy */;
+			targetProxy = 5253883421F7BECC009FBEEF /* PBXContainerItemProxy */;
+		};
+		5253884021F7BECC009FBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5253881E21F7BECA009FBEEF /* festy */;
+			targetProxy = 5253883F21F7BECC009FBEEF /* PBXContainerItemProxy */;
+		};
+		5253884A21F7BECC009FBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5253884621F7BECC009FBEEF /* festy WatchKit App */;
+			targetProxy = 5253884921F7BECC009FBEEF /* PBXContainerItemProxy */;
+		};
+		5253885921F7BECD009FBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5253885521F7BECD009FBEEF /* festy WatchKit Extension */;
+			targetProxy = 5253885821F7BECD009FBEEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5253882621F7BECA009FBEEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5253882721F7BECA009FBEEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5253882B21F7BECC009FBEEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5253882C21F7BECC009FBEEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5253884C21F7BECC009FBEEF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5253884D21F7BECC009FBEEF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5253886521F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5253886621F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5253886821F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		5253886921F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		5253886C21F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = festy_WatchKit_Extension;
+				INFOPLIST_FILE = "festy WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		5253886D21F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = festy_WatchKit_Extension;
+				INFOPLIST_FILE = "festy WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		5253887021F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5253887121F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5253887321F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/festy.app/festy";
+			};
+			name = Debug;
+		};
+		5253887421F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/festy.app/festy";
+			};
+			name = Release;
+		};
+		5253887621F7BECD009FBEEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = festy;
+			};
+			name = Debug;
+		};
+		5253887721F7BECD009FBEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = festyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.festyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = festy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5253881A21F7BECA009FBEEF /* Build configuration list for PBXProject "festy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253886521F7BECD009FBEEF /* Debug */,
+				5253886621F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5253886721F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253886821F7BECD009FBEEF /* Debug */,
+				5253886921F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5253886B21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253886C21F7BECD009FBEEF /* Debug */,
+				5253886D21F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5253886F21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253887021F7BECD009FBEEF /* Debug */,
+				5253887121F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5253887221F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253887321F7BECD009FBEEF /* Debug */,
+				5253887421F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5253887521F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253887621F7BECD009FBEEF /* Debug */,
+				5253887721F7BECD009FBEEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5253881721F7BECA009FBEEF /* Project object */;
+}
