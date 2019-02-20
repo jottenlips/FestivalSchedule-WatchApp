@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ```
    func loadData() {
-        watcher = apollo.watch(query: PerformersQuery()) { (result, error) in
+        let watcher = apollo.watch(query: PerformersQuery()) { (result, error) in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return

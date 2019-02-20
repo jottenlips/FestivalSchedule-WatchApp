@@ -25,6 +25,8 @@
 		5253885E21F7BECD009FBEEF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885D21F7BECD009FBEEF /* ExtensionDelegate.swift */; };
 		5253886021F7BECD009FBEEF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885F21F7BECD009FBEEF /* NotificationController.swift */; };
 		5253886221F7BECD009FBEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253886121F7BECD009FBEEF /* Assets.xcassets */; };
+		52AFD03C221E0E2B0041A623 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52AFD03B221E0E2B0041A623 /* README.md */; };
+		52AFD03E221E0F300041A623 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AFD03D221E0F300041A623 /* config.swift */; };
 		52E883D2221DADE400A559F6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E883D0221DADE400A559F6 /* schema.json */; };
 		52E883D5221DAE5200A559F6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E883D4221DAE5200A559F6 /* API.swift */; };
 		52E883D7221DB2C700A559F6 /* queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 52E883D6221DB2C700A559F6 /* queries.graphql */; };
@@ -117,6 +119,8 @@
 		5253886121F7BECD009FBEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5253886321F7BECD009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5253886421F7BECD009FBEEF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		52AFD03B221E0E2B0041A623 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		52AFD03D221E0F300041A623 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		52CDF4CB01169D0E227B3E37 /* Pods-festy WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festy WatchKit App/Pods-festy WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		52E883D0221DADE400A559F6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = SOURCE_ROOT; };
 		52E883D4221DAE5200A559F6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
@@ -223,11 +227,13 @@
 		5253882121F7BECA009FBEEF /* festy */ = {
 			isa = PBXGroup;
 			children = (
+				52AFD03B221E0E2B0041A623 /* README.md */,
 				52E883D6221DB2C700A559F6 /* queries.graphql */,
 				52E883D4221DAE5200A559F6 /* API.swift */,
 				52E883D0221DADE400A559F6 /* schema.json */,
 				5253882221F7BECA009FBEEF /* AppDelegate.swift */,
 				5253882421F7BECA009FBEEF /* ViewController.swift */,
+				52AFD03D221E0F300041A623 /* config.swift */,
 				5253882621F7BECA009FBEEF /* Main.storyboard */,
 				5253882921F7BECC009FBEEF /* Assets.xcassets */,
 				5253882B21F7BECC009FBEEF /* LaunchScreen.storyboard */,
@@ -446,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AFD03C221E0E2B0041A623 /* README.md in Resources */,
 				52E883D7221DB2C700A559F6 /* queries.graphql in Resources */,
 				52E883D2221DADE400A559F6 /* schema.json in Resources */,
 				5253882D21F7BECC009FBEEF /* LaunchScreen.storyboard in Resources */,
@@ -638,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5253882521F7BECA009FBEEF /* ViewController.swift in Sources */,
+				52AFD03E221E0F300041A623 /* config.swift in Sources */,
 				52E883D5221DAE5200A559F6 /* API.swift in Sources */,
 				5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */,
 			);
