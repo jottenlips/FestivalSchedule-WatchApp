@@ -1,0 +1,23 @@
+query Performers  { 
+        festapp(id: "230") {
+            name
+            startsAt
+            endsAt
+            eventSchedulesCount
+            performers {
+                  id
+                  name
+                  categories {
+                    id,
+                    name,
+                  }
+                  events {
+                    startsAt
+                    endsAt
+                    stage {
+                      name
+                    }
+                  }
+        }
+  }
+}

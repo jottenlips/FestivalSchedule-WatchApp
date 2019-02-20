@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0142E702457CB46F69335F01 /* Pods_festyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCC6346DE52D0EBACA94A09 /* Pods_festyUITests.framework */; };
+		11C2DA21A1F62850F84BCE9F /* Pods_festy_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3273DE425CE993F5605A3D /* Pods_festy_WatchKit_App.framework */; };
+		14A857C7CBC3CD24CF1F11BC /* Pods_festy_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159380F48FA027BF46EFBF0 /* Pods_festy_WatchKit_Extension.framework */; };
 		5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882221F7BECA009FBEEF /* AppDelegate.swift */; };
 		5253882521F7BECA009FBEEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882421F7BECA009FBEEF /* ViewController.swift */; };
 		5253882821F7BECA009FBEEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253882621F7BECA009FBEEF /* Main.storyboard */; };
@@ -22,6 +25,11 @@
 		5253885E21F7BECD009FBEEF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885D21F7BECD009FBEEF /* ExtensionDelegate.swift */; };
 		5253886021F7BECD009FBEEF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253885F21F7BECD009FBEEF /* NotificationController.swift */; };
 		5253886221F7BECD009FBEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5253886121F7BECD009FBEEF /* Assets.xcassets */; };
+		52E883D2221DADE400A559F6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 52E883D0221DADE400A559F6 /* schema.json */; };
+		52E883D5221DAE5200A559F6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E883D4221DAE5200A559F6 /* API.swift */; };
+		52E883D7221DB2C700A559F6 /* queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 52E883D6221DB2C700A559F6 /* queries.graphql */; };
+		A741F6E0A927DB07D1F84503 /* Pods_festy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764EFF3D8D39439AD283B042 /* Pods_festy.framework */; };
+		E4BB31090B63AD978F1F5BC8 /* Pods_festyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052283B588031FF973022DCE /* Pods_festyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +89,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		052283B588031FF973022DCE /* Pods_festyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCC6346DE52D0EBACA94A09 /* Pods_festyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3159380F48FA027BF46EFBF0 /* Pods_festy_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festy_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3846437922F7FF9FB7D0F3AF /* Pods-festyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-festyTests/Pods-festyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5253881F21F7BECA009FBEEF /* festy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = festy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253882221F7BECA009FBEEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5253882421F7BECA009FBEEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,13 +117,36 @@
 		5253886121F7BECD009FBEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5253886321F7BECD009FBEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5253886421F7BECD009FBEEF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		52CDF4CB01169D0E227B3E37 /* Pods-festy WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festy WatchKit App/Pods-festy WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		52E883D0221DADE400A559F6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = SOURCE_ROOT; };
+		52E883D4221DAE5200A559F6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		52E883D6221DB2C700A559F6 /* queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = queries.graphql; sourceTree = SOURCE_ROOT; };
+		53FAFDBCFCA7615934D7B67B /* Pods-festyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festyUITests/Pods-festyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57D667AD2A63152B124CAEE6 /* Pods-festy WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-festy WatchKit App/Pods-festy WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		6788AD337833A5198E84A537 /* Pods-festyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festyTests/Pods-festyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73971D5EB635FFBC5429BD8E /* Pods-festy WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festy WatchKit Extension/Pods-festy WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		764EFF3D8D39439AD283B042 /* Pods_festy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0ADD5F72E150896D0C7140 /* Pods-festy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy.release.xcconfig"; path = "Pods/Target Support Files/Pods-festy/Pods-festy.release.xcconfig"; sourceTree = "<group>"; };
+		AA69DFC39940829C8D9A2140 /* Pods-festy WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-festy WatchKit Extension/Pods-festy WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		CE3273DE425CE993F5605A3D /* Pods_festy_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festy_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26799085F413B3E4A487871 /* Pods-festy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-festy/Pods-festy.debug.xcconfig"; sourceTree = "<group>"; };
+		E4EDA5AD75633107C35DD908 /* Pods-festyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-festyUITests/Pods-festyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2EF014CC774AB08B6AE9731F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C2DA21A1F62850F84BCE9F /* Pods_festy_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5253881C21F7BECA009FBEEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A741F6E0A927DB07D1F84503 /* Pods_festy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BB31090B63AD978F1F5BC8 /* Pods_festyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0142E702457CB46F69335F01 /* Pods_festyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +170,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A857C7CBC3CD24CF1F11BC /* Pods_festy_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CB14CE361CEF34841EAEEDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26799085F413B3E4A487871 /* Pods-festy.debug.xcconfig */,
+				7D0ADD5F72E150896D0C7140 /* Pods-festy.release.xcconfig */,
+				52CDF4CB01169D0E227B3E37 /* Pods-festy WatchKit App.debug.xcconfig */,
+				57D667AD2A63152B124CAEE6 /* Pods-festy WatchKit App.release.xcconfig */,
+				73971D5EB635FFBC5429BD8E /* Pods-festy WatchKit Extension.debug.xcconfig */,
+				AA69DFC39940829C8D9A2140 /* Pods-festy WatchKit Extension.release.xcconfig */,
+				6788AD337833A5198E84A537 /* Pods-festyTests.debug.xcconfig */,
+				3846437922F7FF9FB7D0F3AF /* Pods-festyTests.release.xcconfig */,
+				53FAFDBCFCA7615934D7B67B /* Pods-festyUITests.debug.xcconfig */,
+				E4EDA5AD75633107C35DD908 /* Pods-festyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5253881621F7BECA009FBEEF = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +203,8 @@
 				5253884B21F7BECC009FBEEF /* festy WatchKit App */,
 				5253885A21F7BECD009FBEEF /* festy WatchKit Extension */,
 				5253882021F7BECA009FBEEF /* Products */,
+				0CB14CE361CEF34841EAEEDB /* Pods */,
+				56944DDF218F0C2D798C4FFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +223,9 @@
 		5253882121F7BECA009FBEEF /* festy */ = {
 			isa = PBXGroup;
 			children = (
+				52E883D6221DB2C700A559F6 /* queries.graphql */,
+				52E883D4221DAE5200A559F6 /* API.swift */,
+				52E883D0221DADE400A559F6 /* schema.json */,
 				5253882221F7BECA009FBEEF /* AppDelegate.swift */,
 				5253882421F7BECA009FBEEF /* ViewController.swift */,
 				5253882621F7BECA009FBEEF /* Main.storyboard */,
@@ -217,6 +277,18 @@
 			path = "festy WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		56944DDF218F0C2D798C4FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				764EFF3D8D39439AD283B042 /* Pods_festy.framework */,
+				CE3273DE425CE993F5605A3D /* Pods_festy_WatchKit_App.framework */,
+				3159380F48FA027BF46EFBF0 /* Pods_festy_WatchKit_Extension.framework */,
+				052283B588031FF973022DCE /* Pods_festyTests.framework */,
+				0CCC6346DE52D0EBACA94A09 /* Pods_festyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,10 +296,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253886F21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy" */;
 			buildPhases = (
+				0537A617E8B4F49482C0D53E /* [CP] Check Pods Manifest.lock */,
 				5253881B21F7BECA009FBEEF /* Sources */,
 				5253881C21F7BECA009FBEEF /* Frameworks */,
 				5253881D21F7BECA009FBEEF /* Resources */,
 				5253886E21F7BECD009FBEEF /* Embed Watch Content */,
+				E3D0D66F5AB8E398DCCE2026 /* [CP] Embed Pods Frameworks */,
+				5253887821F7C16A009FBEEF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,6 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253887221F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyTests" */;
 			buildPhases = (
+				1B9D92002D58022263A16228 /* [CP] Check Pods Manifest.lock */,
 				5253882F21F7BECC009FBEEF /* Sources */,
 				5253883021F7BECC009FBEEF /* Frameworks */,
 				5253883121F7BECC009FBEEF /* Resources */,
@@ -261,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253887521F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festyUITests" */;
 			buildPhases = (
+				3245664158F0CC2FA1140979 /* [CP] Check Pods Manifest.lock */,
 				5253883A21F7BECC009FBEEF /* Sources */,
 				5253883B21F7BECC009FBEEF /* Frameworks */,
 				5253883C21F7BECC009FBEEF /* Resources */,
@@ -279,8 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253886B21F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit App" */;
 			buildPhases = (
+				3FDBDBFEE430CE719E22BA90 /* [CP] Check Pods Manifest.lock */,
 				5253884521F7BECC009FBEEF /* Resources */,
 				5253886A21F7BECD009FBEEF /* Embed App Extensions */,
+				2EF014CC774AB08B6AE9731F /* Frameworks */,
+				5253887921F7C173009FBEEF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,6 +376,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5253886721F7BECD009FBEEF /* Build configuration list for PBXNativeTarget "festy WatchKit Extension" */;
 			buildPhases = (
+				E3989A07102FD387A73CBA23 /* [CP] Check Pods Manifest.lock */,
 				5253885221F7BECD009FBEEF /* Sources */,
 				5253885321F7BECD009FBEEF /* Frameworks */,
 				5253885421F7BECD009FBEEF /* Resources */,
@@ -365,6 +446,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E883D7221DB2C700A559F6 /* queries.graphql in Resources */,
+				52E883D2221DADE400A559F6 /* schema.json in Resources */,
 				5253882D21F7BECC009FBEEF /* LaunchScreen.storyboard in Resources */,
 				5253882A21F7BECC009FBEEF /* Assets.xcassets in Resources */,
 				5253882821F7BECA009FBEEF /* Main.storyboard in Resources */,
@@ -404,12 +487,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0537A617E8B4F49482C0D53E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-festy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B9D92002D58022263A16228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-festyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3245664158F0CC2FA1140979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-festyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDBDBFEE430CE719E22BA90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-festy WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5253887821F7C16A009FBEEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nAPOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
+		5253887921F7C173009FBEEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nAPOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
+		E3989A07102FD387A73CBA23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-festy WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D0D66F5AB8E398DCCE2026 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-festy/Pods-festy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-festy/Pods-festy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5253881B21F7BECA009FBEEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5253882521F7BECA009FBEEF /* ViewController.swift in Sources */,
+				52E883D5221DAE5200A559F6 /* API.swift in Sources */,
 				5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +840,7 @@
 		};
 		5253886821F7BECD009FBEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73971D5EB635FFBC5429BD8E /* Pods-festy WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +862,7 @@
 		};
 		5253886921F7BECD009FBEEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA69DFC39940829C8D9A2140 /* Pods-festy WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -653,6 +884,7 @@
 		};
 		5253886C21F7BECD009FBEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CDF4CB01169D0E227B3E37 /* Pods-festy WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -671,6 +903,7 @@
 		};
 		5253886D21F7BECD009FBEEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D667AD2A63152B124CAEE6 /* Pods-festy WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -689,6 +922,7 @@
 		};
 		5253887021F7BECD009FBEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26799085F413B3E4A487871 /* Pods-festy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -706,6 +940,7 @@
 		};
 		5253887121F7BECD009FBEEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0ADD5F72E150896D0C7140 /* Pods-festy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -723,6 +958,7 @@
 		};
 		5253887321F7BECD009FBEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6788AD337833A5198E84A537 /* Pods-festyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -743,6 +979,7 @@
 		};
 		5253887421F7BECD009FBEEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3846437922F7FF9FB7D0F3AF /* Pods-festyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -763,6 +1000,7 @@
 		};
 		5253887621F7BECD009FBEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FAFDBCFCA7615934D7B67B /* Pods-festyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -782,6 +1020,7 @@
 		};
 		5253887721F7BECD009FBEEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EDA5AD75633107C35DD908 /* Pods-festyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
