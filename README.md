@@ -5,6 +5,7 @@
 **Install Apollo**
 
 > `npm install -g apollo`
+
 > `npm install -g apollo-codegen`
 
 **Setup Project**
