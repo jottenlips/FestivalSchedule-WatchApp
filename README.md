@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 > `git clone git@github.com:Aloompa/citizen-users-api.git`
 
-> `git@github.com:Aloompa/festapi-graphql.git`
+> `git clone git@github.com:Aloompa/festapi-graphql.git`
 
 > run `npm i` in all directories
 
