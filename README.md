@@ -76,14 +76,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 **Running GQL server locally** *(optional)*
 > `cd ~/`
+
 > `mkdir aloompaApis`
+
 > `cd aloompaApis`
+
 > `git clone git@github.com:Aloompa/aloompa-api-graphql.git`
+
 > `git clone git@github.com:Aloompa/citizen-users-api.git`
+
 > `git@github.com:Aloompa/festapi-graphql.git`
+
 > run `npm i` in all directories
+
 > cd `aloompa-api-graphql`
-> run `npm run start:local`
+
+> run `npm run start:local` or `python start.py`
+
 > Should be running on **Port 9000**
 
 ## Why we are here
