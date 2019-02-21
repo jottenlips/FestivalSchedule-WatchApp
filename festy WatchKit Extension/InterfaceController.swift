@@ -19,16 +19,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-    
-        // Configure interface objects here.
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-//        let apollo = configureApollo()
-//        loadData(apollo: apollo)
+
         if (WCSession.isSupported()) {
             let session = WCSession.default
             session.delegate = self
@@ -43,11 +38,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-//        if let messageContent = message["messageContent"] as? String {
-//            self.yourLabel.setText(messageContent) // "YOUR MESSAGE HERE"
-//        }
-        let json = message["result"]
-        self.label.setText(json as? String)
+        let jsonString = message["result"] as! String
+        let json = convertStringToDictionary(json: jsonString )
+    
+        self.label.setText(jsonString)
     }
-
+    
+    func convertStringToDictionary(json: String) -> [String: AnyObject]? {
+        if let data = json.data(using: String.Encoding.utf8) {
+            do {
+                let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+                return json as! [String: AnyObject]?
+            }
+        }
+        return nil
+    }
 }
