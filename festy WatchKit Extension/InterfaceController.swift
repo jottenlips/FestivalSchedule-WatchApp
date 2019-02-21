@@ -41,15 +41,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        self.label.setText("HIT")
-    }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
 //        if let messageContent = message["messageContent"] as? String {
 //            self.yourLabel.setText(messageContent) // "YOUR MESSAGE HERE"
 //        }
-        self.label.setText("HIT")
+        let json = message["result"]
+        self.label.setText(json as? String)
     }
 
 }

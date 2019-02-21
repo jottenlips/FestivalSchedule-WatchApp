@@ -35,9 +35,24 @@ class ViewController: UIViewController, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self
             session.activate()
-            session.sendMessage(["result" : self.festapp!.performers!.first], replyHandler:nil, errorHandler:nil)
+            if let json = self.festapp?.jsonObject {
+            let stringifiedJson = jsonToString(json: json)
+                    session.sendMessage(["result" : stringifiedJson], replyHandler:nil, errorHandler:nil)
             }
+        }
     }
+    
+    func jsonToString(json: JSONObject) -> String {
+        do {
+            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let convertedString = String(data: data1, encoding: String.Encoding.utf8)
+            return convertedString!
+        } catch let myJSONError {
+            print(myJSONError)
+            return ""
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +61,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
 //    func parseFestappPerformers(performers: <PerformersQuery.Data.Festapp.Performers>) {
-//        
+//
 //    }
     
     func configureApollo() -> ApolloClient {
