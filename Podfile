@@ -24,6 +24,7 @@ target 'festy WatchKit App' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Apollo', '~> 0.9'
   # Pods for festy WatchKit App
 
 end
