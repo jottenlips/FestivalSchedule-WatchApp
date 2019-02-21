@@ -20,6 +20,20 @@
                ReferencedContainer = "container:festy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5253884621F7BECC009FBEEF"
+               BuildableName = "festy WatchKit App.app"
+               BlueprintName = "festy WatchKit App"
+               ReferencedContainer = "container:festy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

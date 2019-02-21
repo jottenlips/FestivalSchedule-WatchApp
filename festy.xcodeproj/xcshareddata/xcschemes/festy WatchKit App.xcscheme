@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5253884621F7BECC009FBEEF"
-               BuildableName = "festy WatchKit App.app"
-               BlueprintName = "festy WatchKit App"
+               BlueprintIdentifier = "5253881E21F7BECA009FBEEF"
+               BuildableName = "festy.app"
+               BlueprintName = "festy"
                ReferencedContainer = "container:festy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5253881E21F7BECA009FBEEF"
-               BuildableName = "festy.app"
-               BlueprintName = "festy"
+               BlueprintIdentifier = "5253884621F7BECC009FBEEF"
+               BuildableName = "festy WatchKit App.app"
+               BlueprintName = "festy WatchKit App"
                ReferencedContainer = "container:festy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -14,7 +14,6 @@ import Apollo
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
  
     func applicationWillResignActive(_ application: UIApplication) {
     }
@@ -26,5 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func applicationWillTerminate(_ application: UIApplication) {
     }
+    
 }
 
