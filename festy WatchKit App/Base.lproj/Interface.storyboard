@@ -22,7 +22,7 @@
                                 <tableRow identifier="PerformerTableRow" id="XL1-Aa-Van" userLabel="PerformerTableRow" customClass="PerformerTableRow" customModule="festy_WatchKit_App" customModuleProvider="target">
                                     <group key="rootItem" width="1" alignment="left" id="esT-fH-3OG">
                                         <items>
-                                            <label width="136" height="54" alignment="left" text="Artist 0.0 0:00" textAlignment="center" id="2uy-AZ-xif">
+                                            <label alignment="left" text="d, h:mm a Artist" textAlignment="left" numberOfLines="0" id="2uy-AZ-xif">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
                                         </items>

@@ -1,5 +1,5 @@
-query Performers  { 
-        festapp(id: "754") {
+query Performers($id: String!)  {
+        festapp(id: $id) {
             name
             startsAt
             endsAt

@@ -25,18 +25,42 @@
                                     <action selector="updateWatchData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oz-OU-L2S"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6N4-Hk-8cd">
+                                <rect key="frame" x="187" y="325" width="112" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textField:" destination="BYZ-38-t0r" eventType="editingChanged" id="W7J-zR-PFz"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter AppId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xs-Li-Jv3">
+                                <rect key="frame" x="76" y="330.5" width="95" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6N4-Hk-8cd" firstAttribute="leading" secondItem="5xs-Li-Jv3" secondAttribute="trailing" constant="16" id="1Wf-VF-kcb"/>
                             <constraint firstItem="fw7-hV-EG9" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="400" id="1gy-3W-vmH"/>
+                            <constraint firstItem="5xs-Li-Jv3" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="76" id="Cfv-f8-ceg"/>
+                            <constraint firstItem="fw7-hV-EG9" firstAttribute="top" secondItem="5xs-Li-Jv3" secondAttribute="bottom" constant="69" id="iQA-wO-dop"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="fw7-hV-EG9" secondAttribute="trailing" constant="20" id="mKf-Q7-LC7"/>
                             <constraint firstItem="fw7-hV-EG9" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="20" id="qTv-Eg-njc"/>
+                            <constraint firstItem="fw7-hV-EG9" firstAttribute="top" secondItem="6N4-Hk-8cd" secondAttribute="bottom" constant="65" id="yah-3g-VGT"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="6N4-Hk-8cd" secondAttribute="trailing" constant="76" id="ztK-Kk-zoL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="6N4-Hk-8cd" id="m5k-Lu-dcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

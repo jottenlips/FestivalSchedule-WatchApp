@@ -10,6 +10,5 @@ import UIKit
 import WatchKit
 
 class PerformerTableRow: NSObject {
-
     @IBOutlet weak var artistWithTimeLabel: WKInterfaceLabel!
 }

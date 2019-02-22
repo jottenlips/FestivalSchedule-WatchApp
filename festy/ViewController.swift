@@ -13,10 +13,18 @@ import PromiseKit
 
 class ViewController: UIViewController, WCSessionDelegate {
     
+    var id: String = ""
+    
+    let 👩‍🚀: ApolloClient {
+        return configureApollo()
+    }
+    
     var festapp: PerformersQuery.Data.Festapp? {
         didSet {
         }
     }
+    
+    @IBOutlet weak var textField: UITextField!
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     
@@ -30,16 +38,12 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
+    @IBAction func textField(_ sender: Any) {
+        self.id = textField.text ?? "230";
+    }
+    
     @IBAction func updateWatchData(_ sender: Any) {
-        if (WCSession.isSupported()) {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-            if let json = self.festapp?.jsonObject {
-            let stringifiedJson = jsonToString(json: json)
-                    session.sendMessage(["result" : stringifiedJson], replyHandler:nil, errorHandler:nil)
-            }
-        }
+        loadData(apollo: 👩‍🚀)
     }
     
     func jsonToString(json: JSONObject) -> String {
@@ -56,13 +60,8 @@ class ViewController: UIViewController, WCSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let 👩‍🚀 = configureApollo()
-        loadData(apollo: 👩‍🚀)
+        loadData()
     }
-    
-//    func parseFestappPerformers(performers: <PerformersQuery.Data.Festapp.Performers>) {
-//
-//    }
     
     func configureApollo() -> ApolloClient {
         let configuration = URLSessionConfiguration.default
@@ -75,13 +74,22 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     var watcher: GraphQLQueryWatcher<PerformersQuery>?
     
-    func loadData(apollo: ApolloClient) {
-            watcher = apollo.watch(query: PerformersQuery()) { (result, error) in
+    func loadData() {
+        if (WCSession.isSupported()) {
+            watcher = self.👩‍🚀.watch(query: PerformersQuery(id: self.id)) { (result, error) in
                 if let error = error {
                     NSLog("Error while fetching query: \(error.localizedDescription)")
                     return;
                 }
+                let session = WCSession.default
+                session.delegate = self
+                session.activate()
                 self.festapp = result?.data?.festapp;
+                if let json = self.festapp?.jsonObject {
+                    let stringifiedJson = self.jsonToString(json: json)
+                    session.sendMessage(["result" : stringifiedJson], replyHandler:nil, errorHandler:nil)
+                }
             }
+        }
     }
 }

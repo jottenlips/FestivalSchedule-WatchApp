@@ -49,9 +49,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         let jsonString = message["result"] as! String
-        UserDefaults.standard.set(jsonString, forKey: "festData") //String
+        UserDefaults.standard.set(jsonString, forKey: "festData")
         
-
         let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) ?? Data.init()
         
         if let json = try? JSON(data: dataFromString) {
@@ -65,7 +64,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func formatTime(time: Int) -> String {
         let date = convertMilliToDate(milliseconds: time)
         let df = DateFormatter()
-        df.dateFormat = "dd H:m"
+        df.dateFormat = "dd, h:mm a"
         return df.string(from: date)
     }
     
@@ -74,21 +73,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func loadTableData(data: JSON) {
-        // Set total row count. Remember our identifier was Cell
-        let performers = data["performers"]
         let events = data["events"]
         tableView.setNumberOfRows(events.count, withRowType: "PerformerTableRow")
         var i = 0
-
+        var timeObjects = Array<String>();
         for event in events {
             if let name = event.1["name"].string {
                     if let row = tableView.rowController(at: i) as? PerformerTableRow {
                         if let milli = event.1["startsAt"].string {
                             let time = formatTime(time: Int(milli) ?? 0)
                             row.artistWithTimeLabel.setText(time+" "+name)
+                            timeObjects.append(milli);
+                        } else {
+                            row.artistWithTimeLabel.setText("TBD"+" "+name)
+                            timeObjects.append("0");
                         }
+                        i += 1
                     }
-                i += 1
             }
         }
     }
