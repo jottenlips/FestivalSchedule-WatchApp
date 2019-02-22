@@ -1,4 +1,4 @@
-query Performers($id: String!)  {
+query Performers($id: String!) {
     festapp(id: $id) {
         name
         startsAt

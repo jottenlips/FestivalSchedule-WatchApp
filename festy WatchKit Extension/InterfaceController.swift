@@ -63,7 +63,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func formatTime(time: Int) -> String {
         let date = convertMilliToDate(milliseconds: time)
         let df = DateFormatter()
-        df.dateFormat = "dd, h:mm a"
+        df.dateFormat = "MMM dd, h:mm a"
         return df.string(from: date)
     }
     
