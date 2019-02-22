@@ -21,14 +21,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        let festData = UserDefaults.standard.string(forKey: "festData")
-        let dataFromString = festData?.data(using: .utf8, allowLossyConversion: false) ?? Data.init()
-        if let json = try? JSON(data: dataFromString) {
-            if let name = json["name"].string {
-                self.label.setText(name)
-            }
-            loadTableData(data: json)
-        }
+       
     }
     
     override func willActivate() {
@@ -39,6 +32,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
+        configureWatchWithData()
     }
     
     override func didDeactivate() {
@@ -46,6 +40,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
+    func configureWatchWithData() {
+        let festData = UserDefaults.standard.string(forKey: "festData")
+        let dataFromString = festData?.data(using: .utf8, allowLossyConversion: false) ?? Data.init()
+        if let json = try? JSON(data: dataFromString) {
+            if let name = json["name"].string {
+                self.label.setText(name)
+            }
+            loadTableData(data: json)
+        }
+    }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         let jsonString = message["result"] as! String
@@ -53,12 +57,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) ?? Data.init()
         
-        if let json = try? JSON(data: dataFromString) {
-            if let name = json["name"].string {
-                self.label.setText(name)
-            }
-            loadTableData(data: json)
-        }
+        configureWatchWithData();
     }
     
     func formatTime(time: Int) -> String {
