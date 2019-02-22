@@ -15,7 +15,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     var id: String = ""
     
-    let 👩‍🚀: ApolloClient {
+    var 👩‍🚀: ApolloClient {
         return configureApollo()
     }
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func updateWatchData(_ sender: Any) {
-        loadData(apollo: 👩‍🚀)
+        loadData()
     }
     
     func jsonToString(json: JSONObject) -> String {
@@ -57,7 +57,6 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
