@@ -11,20 +11,24 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.8.2):
     - PromiseKit/CorePromise
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Apollo (~> 0.9)
   - PromiseKit (~> 6.8)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Apollo
     - PromiseKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Apollo: 450856adbdebcdf28c3c671f81732ac3f9944065
   PromiseKit: 8200c4555a5b433ac26f5143093cb792ee2c3426
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 83bf21f90cc16fc4a7efecb4bcd1210c59c5a622
+PODFILE CHECKSUM: 92160e99cfe5679717561bb8a33c44201c150281
 
 COCOAPODS: 1.5.3

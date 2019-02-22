@@ -11,6 +11,7 @@
 		11C2DA21A1F62850F84BCE9F /* Pods_festy_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3273DE425CE993F5605A3D /* Pods_festy_WatchKit_App.framework */; };
 		14A857C7CBC3CD24CF1F11BC /* Pods_festy_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159380F48FA027BF46EFBF0 /* Pods_festy_WatchKit_Extension.framework */; };
 		52367B31221E3EA7009B722A /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52367B30221E3EA7009B722A /* Apollo.framework */; };
+		5252BEA722204D1C00EC78D5 /* PerformerTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252BEA622204D1C00EC78D5 /* PerformerTableRow.swift */; };
 		5253882321F7BECA009FBEEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882221F7BECA009FBEEF /* AppDelegate.swift */; };
 		5253882521F7BECA009FBEEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253882421F7BECA009FBEEF /* ViewController.swift */; };
 		5253882821F7BECA009FBEEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5253882621F7BECA009FBEEF /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		3159380F48FA027BF46EFBF0 /* Pods_festy_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_festy_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3846437922F7FF9FB7D0F3AF /* Pods-festyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-festyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-festyTests/Pods-festyTests.release.xcconfig"; sourceTree = "<group>"; };
 		52367B30221E3EA7009B722A /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5252BEA622204D1C00EC78D5 /* PerformerTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformerTableRow.swift; sourceTree = "<group>"; };
 		5253881F21F7BECA009FBEEF /* festy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = festy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253882221F7BECA009FBEEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5253882421F7BECA009FBEEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				5253886121F7BECD009FBEEF /* Assets.xcassets */,
 				5253886321F7BECD009FBEEF /* Info.plist */,
 				5253886421F7BECD009FBEEF /* PushNotificationPayload.apns */,
+				5252BEA622204D1C00EC78D5 /* PerformerTableRow.swift */,
 			);
 			path = "festy WatchKit Extension";
 			sourceTree = "<group>";
@@ -562,10 +565,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-festy WatchKit Extension/Pods-festy WatchKit Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Apollo-watchOS/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -688,6 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5252BEA722204D1C00EC78D5 /* PerformerTableRow.swift in Sources */,
 				5253886021F7BECD009FBEEF /* NotificationController.swift in Sources */,
 				5253885E21F7BECD009FBEEF /* ExtensionDelegate.swift in Sources */,
 				5253885C21F7BECD009FBEEF /* InterfaceController.swift in Sources */,

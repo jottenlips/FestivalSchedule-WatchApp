@@ -4,6 +4,7 @@ query Performers  {
             startsAt
             endsAt
             eventSchedulesCount
+            eventsCount
             performers {
                   id
                   name

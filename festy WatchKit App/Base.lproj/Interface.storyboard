@@ -14,10 +14,29 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="festy_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="94" height="22" alignment="left" text="Label" id="GeL-s8-uKL"/>
+                        <label width="136" alignment="left" text="Sync from Phone" textAlignment="center" numberOfLines="0" id="GeL-s8-uKL">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <table alignment="left" id="mcs-lz-JgA">
+                            <items>
+                                <tableRow identifier="PerformerTableRow" id="XL1-Aa-Van" userLabel="PerformerTableRow" customClass="PerformerTableRow" customModule="festy_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" alignment="left" id="esT-fH-3OG">
+                                        <items>
+                                            <label width="136" height="54" alignment="left" text="Artist 0.0 0:00" textAlignment="center" id="2uy-AZ-xif">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="artistWithTimeLabel" destination="2uy-AZ-xif" id="jgv-GY-Stj"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
                         <outlet property="label" destination="GeL-s8-uKL" id="O3D-nJ-iI8"/>
+                        <outlet property="tableView" destination="mcs-lz-JgA" id="Xfp-5z-EDs"/>
                     </connections>
                 </controller>
             </objects>

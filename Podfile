@@ -35,6 +35,8 @@ target 'festy WatchKit Extension' do
   use_frameworks!
 
   pod 'Apollo', '~> 0.9'
+  pod 'SwiftyJSON', '~> 4.0'
+
   # Pods for festy WatchKit Extension
 
 end

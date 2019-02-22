@@ -4,7 +4,7 @@ import Apollo
 
 public final class PerformersQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Performers {\n  festapp(id: \"754\") {\n    __typename\n    name\n    startsAt\n    endsAt\n    eventSchedulesCount\n    performers {\n      __typename\n      id\n      name\n      categories {\n        __typename\n        id\n        name\n      }\n      events {\n        __typename\n        startsAt\n        endsAt\n        stage {\n          __typename\n          name\n        }\n      }\n    }\n  }\n}"
+    "query Performers {\n  festapp(id: \"754\") {\n    __typename\n    name\n    startsAt\n    endsAt\n    eventSchedulesCount\n    eventsCount\n    performers {\n      __typename\n      id\n      name\n      categories {\n        __typename\n        id\n        name\n      }\n      events {\n        __typename\n        startsAt\n        endsAt\n        stage {\n          __typename\n          name\n        }\n      }\n    }\n  }\n}"
 
   public init() {
   }
@@ -44,6 +44,7 @@ public final class PerformersQuery: GraphQLQuery {
         GraphQLField("startsAt", type: .scalar(String.self)),
         GraphQLField("endsAt", type: .scalar(String.self)),
         GraphQLField("eventSchedulesCount", type: .scalar(Int.self)),
+        GraphQLField("eventsCount", type: .scalar(Int.self)),
         GraphQLField("performers", type: .list(.object(Performer.selections))),
       ]
 
@@ -53,8 +54,8 @@ public final class PerformersQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(name: String? = nil, startsAt: String? = nil, endsAt: String? = nil, eventSchedulesCount: Int? = nil, performers: [Performer?]? = nil) {
-        self.init(unsafeResultMap: ["__typename": "FestApp", "name": name, "startsAt": startsAt, "endsAt": endsAt, "eventSchedulesCount": eventSchedulesCount, "performers": performers.flatMap { (value: [Performer?]) -> [ResultMap?] in value.map { (value: Performer?) -> ResultMap? in value.flatMap { (value: Performer) -> ResultMap in value.resultMap } } }])
+      public init(name: String? = nil, startsAt: String? = nil, endsAt: String? = nil, eventSchedulesCount: Int? = nil, eventsCount: Int? = nil, performers: [Performer?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "FestApp", "name": name, "startsAt": startsAt, "endsAt": endsAt, "eventSchedulesCount": eventSchedulesCount, "eventsCount": eventsCount, "performers": performers.flatMap { (value: [Performer?]) -> [ResultMap?] in value.map { (value: Performer?) -> ResultMap? in value.flatMap { (value: Performer) -> ResultMap in value.resultMap } } }])
       }
 
       public var __typename: String {
@@ -99,6 +100,15 @@ public final class PerformersQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "eventSchedulesCount")
+        }
+      }
+
+      public var eventsCount: Int? {
+        get {
+          return resultMap["eventsCount"] as? Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "eventsCount")
         }
       }
 
