@@ -64,7 +64,6 @@ func configureApollo() -> ApolloClient {
     return 👩‍🚀;
 }
 
-}
 ```
 >- config.swift 
 
