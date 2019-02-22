@@ -1,4 +1,4 @@
-# Making your first GraphQL iOS App
+# Making a GraphQL/Aloompa Api iOS App
 ## 📈💖🍏
 
 ## Client Setup
@@ -27,52 +27,49 @@ apollo schema:download --endpoint=https://api.aloompa.com/graphql schema.json`
 > `vim queries.graphql`
 >- ### 👩‍🏫 learn vim
 ```
-query Performers  { 
-        festapp(id: "230") {
+query Performers($id: String!)  {
+        festapp(id: $id) {
             name
             startsAt
-            endsAt
-            eventSchedulesCount
-            performers {
-                  id
-                  name
-                  categories {
-                    id,
-                    name,
-                  }
-                  events {
-                    startsAt
-                    endsAt
-                    stage {
-                      name
-                    }
-                  }
-        }
+            events {
+                performers {
+                    name
+                }
+                name
+                startsAt
+            }
   }
 }
+
 ```
 >- Generate your api code 😮
 >
 >`apollo-codegen generate **/*.graphql --schema schema.json --output API.swift`
 >- Add *queries.graphql and API.swift* to your xcodeworkspace
->- app delegate code 
+>- Apollo code to add to your class or delegate
 
 ```
-import UIKit
 import Apollo
 
-// Change localhost to your machine's local IP address when running from a device
-let apollo = ApolloClient(url: URL(string: "http://localhost:9000/graphql")!)
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        apollo.cacheKeyForObject = { $0["id"] }
-        return true
-    }
+var 👩‍🚀: ApolloClient {
+    return configureApollo()
 }
+
+func configureApollo() -> ApolloClient {
+    let configuration = URLSessionConfiguration.default
+    configuration.httpAdditionalHeaders = CONFIG_HEADERS;
+    let url = URL(string: "https://api.aloompa.com/graphql")!
+    let 👩‍🚀 = ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
+    👩‍🚀.cacheKeyForObject = { $0["id"] }
+    return 👩‍🚀;
+}
+
+}
+```
+>- config.swift 
+
+```
+let CONFIG_HEADERS = ["applicationtoken": "", "authorization": ""]
 ```
 
 **Running GQL server locally** *(optional)*
@@ -100,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ```
    func loadData() {
-        let watcher = apollo.watch(query: PerformersQuery()) { (result, error) in
+   let watcher = apollo.watch(query: PerformersQuery(id: someIdString)) { (result, error) in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return
@@ -110,4 +107,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 ```
-

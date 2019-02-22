@@ -1,31 +1,13 @@
 query Performers($id: String!)  {
-        festapp(id: $id) {
+    festapp(id: $id) {
+        name
+        startsAt
+        events {
+            performers {
+                name
+            }
             name
             startsAt
-            endsAt
-            eventSchedulesCount
-            eventsCount
-            events {
-                performers {
-                    name
-                }
-                name
-                startsAt
-            }
-            performers {
-                  id
-                  name
-                  categories {
-                    id,
-                    name,
-                  }
-                  events {
-                    startsAt
-                    endsAt
-                    stage {
-                      name
-                    }
-                  }
         }
-  }
+    }
 }
