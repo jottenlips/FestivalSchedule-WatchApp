@@ -38,7 +38,7 @@ query Performers($id: String!)  {
                 name
                 startsAt
             }
-  }
+         }
 }
 
 ```
