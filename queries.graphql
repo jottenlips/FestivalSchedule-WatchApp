@@ -5,6 +5,13 @@ query Performers  {
             endsAt
             eventSchedulesCount
             eventsCount
+            events {
+                performers {
+                    name
+                }
+                name
+                startsAt
+            }
             performers {
                   id
                   name
