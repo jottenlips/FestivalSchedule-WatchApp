@@ -80,6 +80,7 @@ class ViewController: UIViewController, WCSessionDelegate {
                     NSLog("Error while fetching query: \(error.localizedDescription)")
                     return;
                 }
+//                result?.data?.me
                 let session = WCSession.default
                 session.delegate = self
                 session.activate()

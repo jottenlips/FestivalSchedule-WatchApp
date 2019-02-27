@@ -2,7 +2,7 @@ query Performers($id: String!) {
     festapp(id: $id) {
         name
         startsAt
-        events {
+    events(per: 5000, sortBy:"startsAt") {
             performers {
                 name
             }

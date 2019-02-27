@@ -4,7 +4,7 @@ import Apollo
 
 public final class PerformersQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Performers($id: String!) {\n  festapp(id: $id) {\n    __typename\n    name\n    startsAt\n    events {\n      __typename\n      performers {\n        __typename\n        name\n      }\n      name\n      startsAt\n    }\n  }\n}"
+    "query Performers($id: String!) {\n  festapp(id: $id) {\n    __typename\n    name\n    startsAt\n    events(per: 5000, sortBy: \"startsAt\") {\n      __typename\n      performers {\n        __typename\n        name\n      }\n      name\n      startsAt\n    }\n  }\n}"
 
   public var id: String
 
@@ -49,7 +49,7 @@ public final class PerformersQuery: GraphQLQuery {
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .scalar(String.self)),
         GraphQLField("startsAt", type: .scalar(String.self)),
-        GraphQLField("events", type: .list(.object(Event.selections))),
+        GraphQLField("events", arguments: ["per": 5000, "sortBy": "startsAt"], type: .list(.object(Event.selections))),
       ]
 
       public private(set) var resultMap: ResultMap

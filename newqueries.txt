@@ -1,0 +1,15 @@
+    festapps {
+        name
+        id
+    }
+    me {
+        id
+        email
+        profileImage
+        app {
+            id
+        }
+    }
+    citizenApp(appId:"49cd43ed-7cf6-40f8-b3b9-05c71b905d64") {
+        name
+    }
