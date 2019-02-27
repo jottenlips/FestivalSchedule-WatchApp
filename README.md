@@ -1,6 +1,6 @@
 # Making a GraphQL/Aloompa Api iOS App
 ## 📈💖🍏
-
+*presentation code*
 ## Client Setup
 **Install Apollo**
 
@@ -38,7 +38,7 @@ query Performers($id: String!)  {
                 name
                 startsAt
             }
-  }
+         }
 }
 
 ```
@@ -64,7 +64,6 @@ func configureApollo() -> ApolloClient {
     return 👩‍🚀;
 }
 
-}
 ```
 >- config.swift 
 
@@ -97,7 +96,7 @@ let CONFIG_HEADERS = ["applicationtoken": "", "authorization": ""]
 
 ```
    func loadData() {
-   let watcher = apollo.watch(query: PerformersQuery(id: someIdString)) { (result, error) in
+        let watcher = apollo.watch(query: PerformersQuery(id: someIdString)) { (result, error) in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return
