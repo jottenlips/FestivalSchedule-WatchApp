@@ -20,9 +20,10 @@
                         <table alignment="left" id="mcs-lz-JgA">
                             <items>
                                 <tableRow identifier="PerformerTableRow" id="XL1-Aa-Van" userLabel="PerformerTableRow" customClass="PerformerTableRow" customModule="festy_WatchKit_App" customModuleProvider="target">
-                                    <group key="rootItem" width="1" alignment="left" id="esT-fH-3OG">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="esT-fH-3OG">
                                         <items>
                                             <label alignment="left" text="d, h:mm a Artist" textAlignment="left" numberOfLines="0" id="2uy-AZ-xif">
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
                                         </items>

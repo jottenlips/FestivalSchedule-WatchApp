@@ -81,10 +81,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                     if let row = tableView.rowController(at: i) as? PerformerTableRow {
                         if let milli = event.1["startsAt"].string {
                             let time = formatTime(time: Int(milli) ?? 0)
-                            row.artistWithTimeLabel.setText(time+" "+name)
+                            row.artistWithTimeLabel.setText("✨ "+time+" "+name)
                             timeObjects.append(milli);
                         } else {
-                            row.artistWithTimeLabel.setText("TBD"+" "+name)
+                            row.artistWithTimeLabel.setText("🤷‍♀️ TBD"+" "+name)
                             timeObjects.append("0");
                         }
                         i += 1
