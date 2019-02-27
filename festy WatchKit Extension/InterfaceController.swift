@@ -54,9 +54,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         let jsonString = message["result"] as! String
         UserDefaults.standard.set(jsonString, forKey: "festData")
-        
-        let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) ?? Data.init()
-        
         configureWatchWithData();
     }
     
