@@ -27,12 +27,3 @@ query Performers($id: String!) {
         }
     }
 }
-
-
-mutation ScheduleEvent($eventId: String, $userId: String) {
-    removeEvent(id: $eventId, userId:$userId) {
-        statusCode
-        event
-        scheduledEventsCountForUser
-    }
-}

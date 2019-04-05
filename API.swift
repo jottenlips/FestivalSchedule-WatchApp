@@ -4,7 +4,7 @@ import Apollo
 
 public final class PerformersQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Performers($id: String!) {\n  festapp(id: $id) {\n    __typename\n    name\n    startsAt\n    events(per: 5000, sortBy: \"startsAt\") {\n      __typename\n      performers {\n        __typename\n        name\n      }\n      name\n      startsAt\n    }\n  }\n  me {\n    __typename\n    id\n    email\n    profileImage\n    app {\n      __typename\n      id\n    }\n  }\n}"
+    "query Performers($id: String!) {\n  festapp(id: $id) {\n    __typename\n    name\n    startsAt\n    events(per: 5000, sortBy: \"startsAt\") {\n      __typename\n      performers {\n        __typename\n        name\n        id\n        categories {\n          __typename\n          id\n        }\n      }\n      name\n      startsAt\n    }\n  }\n  festapps {\n    __typename\n    id\n    name\n  }\n  me {\n    __typename\n    id\n    email\n    profileImage\n    app {\n      __typename\n      id\n    }\n  }\n}"
 
   public var id: String
 
@@ -21,6 +21,7 @@ public final class PerformersQuery: GraphQLQuery {
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("festapp", arguments: ["id": GraphQLVariable("id")], type: .object(Festapp.selections)),
+      GraphQLField("festapps", type: .list(.object(Festapp.selections))),
       GraphQLField("me", type: .object(Me.selections)),
     ]
 
@@ -30,8 +31,8 @@ public final class PerformersQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(festapp: Festapp? = nil, me: Me? = nil) {
-      self.init(unsafeResultMap: ["__typename": "Query", "festapp": festapp.flatMap { (value: Festapp) -> ResultMap in value.resultMap }, "me": me.flatMap { (value: Me) -> ResultMap in value.resultMap }])
+    public init(festapp: Festapp? = nil, festapps: [Festapp?]? = nil, me: Me? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "festapp": festapp.flatMap { (value: Festapp) -> ResultMap in value.resultMap }, "festapps": festapps.flatMap { (value: [Festapp?]) -> [ResultMap?] in value.map { (value: Festapp?) -> ResultMap? in value.flatMap { (value: Festapp) -> ResultMap in value.resultMap } } }, "me": me.flatMap { (value: Me) -> ResultMap in value.resultMap }])
     }
 
     public var festapp: Festapp? {
@@ -40,6 +41,15 @@ public final class PerformersQuery: GraphQLQuery {
       }
       set {
         resultMap.updateValue(newValue?.resultMap, forKey: "festapp")
+      }
+    }
+
+    public var festapps: [Festapp?]? {
+      get {
+        return (resultMap["festapps"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Festapp?] in value.map { (value: ResultMap?) -> Festapp? in value.flatMap { (value: ResultMap) -> Festapp in Festapp(unsafeResultMap: value) } } }
+      }
+      set {
+        resultMap.updateValue(newValue.flatMap { (value: [Festapp?]) -> [ResultMap?] in value.map { (value: Festapp?) -> ResultMap? in value.flatMap { (value: Festapp) -> ResultMap in value.resultMap } } }, forKey: "festapps")
       }
     }
 
@@ -170,6 +180,8 @@ public final class PerformersQuery: GraphQLQuery {
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("name", type: .scalar(String.self)),
+            GraphQLField("id", type: .nonNull(.scalar(String.self))),
+            GraphQLField("categories", type: .list(.object(Category.selections))),
           ]
 
           public private(set) var resultMap: ResultMap
@@ -178,8 +190,8 @@ public final class PerformersQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(name: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Performer", "name": name])
+          public init(name: String? = nil, id: String, categories: [Category?]? = nil) {
+            self.init(unsafeResultMap: ["__typename": "Performer", "name": name, "id": id, "categories": categories.flatMap { (value: [Category?]) -> [ResultMap?] in value.map { (value: Category?) -> ResultMap? in value.flatMap { (value: Category) -> ResultMap in value.resultMap } } }])
           }
 
           public var __typename: String {
@@ -199,6 +211,108 @@ public final class PerformersQuery: GraphQLQuery {
               resultMap.updateValue(newValue, forKey: "name")
             }
           }
+
+          public var id: String {
+            get {
+              return resultMap["id"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
+            }
+          }
+
+          public var categories: [Category?]? {
+            get {
+              return (resultMap["categories"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Category?] in value.map { (value: ResultMap?) -> Category? in value.flatMap { (value: ResultMap) -> Category in Category(unsafeResultMap: value) } } }
+            }
+            set {
+              resultMap.updateValue(newValue.flatMap { (value: [Category?]) -> [ResultMap?] in value.map { (value: Category?) -> ResultMap? in value.flatMap { (value: Category) -> ResultMap in value.resultMap } } }, forKey: "categories")
+            }
+          }
+
+          public struct Category: GraphQLSelectionSet {
+            public static let possibleTypes = ["PerformerCategory"]
+
+            public static let selections: [GraphQLSelection] = [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("id", type: .nonNull(.scalar(String.self))),
+            ]
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(id: String) {
+              self.init(unsafeResultMap: ["__typename": "PerformerCategory", "id": id])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            public var id: String {
+              get {
+                return resultMap["id"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "id")
+              }
+            }
+          }
+        }
+      }
+    }
+
+    public struct Festapp: GraphQLSelectionSet {
+      public static let possibleTypes = ["FestApp"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
+        GraphQLField("name", type: .scalar(String.self)),
+      ]
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: String, name: String? = nil) {
+        self.init(unsafeResultMap: ["__typename": "FestApp", "id": id, "name": name])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: String {
+        get {
+          return resultMap["id"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var name: String? {
+        get {
+          return resultMap["name"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
         }
       }
     }
