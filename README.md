@@ -1,4 +1,4 @@
-# Making a GraphQL/Aloompa Api iOS App
+# Making a GraphQL Api iOS App
 ## 📈💖🍏
 *presentation code*
 ## Client Setup
