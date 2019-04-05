@@ -80,10 +80,10 @@ class ViewController: UIViewController, WCSessionDelegate {
                     NSLog("Error while fetching query: \(error.localizedDescription)")
                     return;
                 }
-//                result?.data?.me
                 let session = WCSession.default
                 session.delegate = self
                 session.activate()
+//                let me = result?.data?.me
                 self.festapp = result?.data?.festapp;
                 if let json = self.festapp?.jsonObject {
                     let stringifiedJson = self.jsonToString(json: json)

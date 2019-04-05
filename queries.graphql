@@ -5,9 +5,34 @@ query Performers($id: String!) {
     events(per: 5000, sortBy:"startsAt") {
             performers {
                 name
+                id
+                categories {
+                    id
+                }
             }
             name
             startsAt
         }
+    }
+    festapps {
+        id
+        name
+    }
+    me {
+        id
+        email
+        profileImage
+        app {
+            id
+        }
+    }
+}
+
+
+mutation ScheduleEvent($eventId: String, $userId: String) {
+    removeEvent(id: $eventId, userId:$userId) {
+        statusCode
+        event
+        scheduledEventsCountForUser
     }
 }
