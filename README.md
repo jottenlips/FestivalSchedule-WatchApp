@@ -1,4 +1,4 @@
-# Making a GraphQL Api iOS App
+# Making a GraphQL iOS App with Apollo
 ## 📈💖🍏
 *presentation code*
 ## Client Setup
